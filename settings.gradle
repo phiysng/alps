@@ -1,0 +1,3 @@
+rootProject.name = 'apls'
+
+include "protobuf-util"

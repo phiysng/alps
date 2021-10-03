@@ -1,0 +1,7 @@
+# protobuf reflection
+
+Protobuf的很多的方法,如序列化反序列化方法,都是绑定到特定的实例的成员方法，
+因此我们如果想实现对所有的protobuf对象都有效的方法，就需要获取某一对象的实例。
+
+其中一种思路便是通过class使用反射来获取protobuf在内部创建的static的defaultInstance.
+有了这个默认的对象实例，我们就可以动态的进行如序列化，反序列化这样的操作了。

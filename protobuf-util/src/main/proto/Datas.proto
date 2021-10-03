@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package io.github.phiysng.proto;
+
+message Rpc{
+  int32 type = 1; // message type
+  string functionName = 2;
+  repeated bytes parameter = 3;
+}
