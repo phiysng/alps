@@ -1,3 +1,6 @@
 rootProject.name = 'alps'
 
 include "protobuf-util"
+include "dubbo-common"
+include "dubbo-consumer"
+include "dubbo-provider"
