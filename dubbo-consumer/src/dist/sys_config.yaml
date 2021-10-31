@@ -1,0 +1,4 @@
+sysyem:
+  name:
+#    https://stackoverflow.com/questions/5743036/deploy-additional-files-in-gradle-application-plugin
+    version:1
