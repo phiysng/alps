@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'application'
+    id 'java'
+
+}
+
+group 'io.github.phiysng'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.lettuce:lettuce-core:6.1.5.RELEASE'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
