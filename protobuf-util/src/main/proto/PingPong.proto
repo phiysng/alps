@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+// 没有这个开关不生成Stub等代码
+// https://stackoverflow.com/questions/31029675/protoc-not-generating-service-stub-files
+option java_generic_services = true;
+
+package io.github.phiysng.proto;
+
+message Response{
+  int32 code = 1;
+  string msg = 2;
+}
+
+service HelloService{
+  rpc Handshake(google.protobuf.Int64Value) returns (Response);
+}
