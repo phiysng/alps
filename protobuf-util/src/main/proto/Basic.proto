@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+// 没有这个开关不生成Stub等代码
+// https://stackoverflow.com/questions/31029675/protoc-not-generating-service-stub-files
+option java_generic_services = true;
+
+package io.github.phiysng.proto;
+
+message Rpc{
+  int32 type = 1; // message type
+  string functionName = 2;
+  repeated bytes parameter = 3;
+}
+
+message Owl{
+map<int32,google.protobuf.Any> data=1;
+}
+
+message Response{
+  int32 code = 1;
+  string msg = 2;
+}
+
+service SearchService{
+  rpc Search(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
