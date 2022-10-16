@@ -11,7 +11,6 @@ plugins {
     id 'application'
     id 'java'
     id 'idea'
-
 }
 
 group 'io.github.phiysng'
@@ -40,12 +39,19 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.17.3'
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.18.2'
     implementation group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.17.3'
     implementation 'com.google.protobuf:protobuf-gradle-plugin:0.8.17'
     // https://mvnrepository.com/artifact/io.netty/netty-all
-    implementation group: 'io.netty', name: 'netty-all', version: '4.1.63.Final'
+    implementation group: 'io.netty', name: 'netty-all', version: '4.1.77.Final'
     implementation 'net.bytebuddy:byte-buddy:1.10.22'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    // logging
+    implementation('ch.qos.logback:logback-classic:1.2.9')
+    implementation('org.slf4j:slf4j-api:1.7.32')
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'

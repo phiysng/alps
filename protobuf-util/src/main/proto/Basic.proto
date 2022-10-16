@@ -9,6 +9,13 @@ option java_generic_services = true;
 
 package io.github.phiysng.proto;
 
+message MetaMsg{
+  int32 type = 1; // message type
+  string functionName = 2;
+  int32 bodySize= 3; // 消息体大小
+  //  repeated bytes parameter = 3;
+}
+
 message Rpc{
   int32 type = 1; // message type
   string functionName = 2;
